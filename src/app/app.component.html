@@ -1,21 +1,6 @@
 <div id="body">
-    <h1>Pipe</h1>
-    <ul>
-        <li> {{ number }} </li>
-        <li> {{ number | currency }} </li>
-        <li> {{ number | currency:code }} </li>
-        <li> {{ number | currency:'EUR' }}</li>
-        <li> {{ number | currency:'USD' }}</li>
-        <li> {{ number | percent}} </li>
-        <li> {{ word }} </li>
-        <li> {{ word | lowercase }} </li>
-        <li> {{ word | titlecase}} </li>
-        <li> {{ word | uppercase}} </li>
-        <li> {{ date }} </li>
-        <li> {{ date | date }} </li>
-        <li> {{ date | date:'shortTime' }} </li>
-        <li> {{ date | date:'date' }} </li>
-        <li> {{ date | date:'fullDate'}} </li>
-        <li> {{date | date:"MM/dd/yy" }}</li>
-    </ul>
+    <button (click)="show=0">workers</button>
+    <button (click)="show=1">role</button>
+    <app-show-workers *ngIf="show==0"></app-show-workers>
+    <app-show-role *ngIf="show==1"></app-show-role>
 </div>
